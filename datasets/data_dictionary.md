@@ -1,0 +1,96 @@
+# <img src=../images/GA-logo.png style="float: left; margin: 5px; height: 55px"> Project 2 - Singapore Housing Data and Kaggle Challenge 
+
+## Data Dictionary
+
+-    `resale_price`: the property's sale price in Singapore dollars. This is the target variable that you're trying to predict for this challenge.
+-    `Tranc_YearMonth`: year and month of the resale transaction, e.g. 2015-02
+-    `town`: HDB township where the flat is located, e.g. BUKIT MERAH
+-    `flat_type`: type of the resale flat unit, e.g. 3 ROOM
+-    `block`: block number of the resale flat, e.g. 454
+-    `street_name`: street name where the resale flat resides, e.g. TAMPINES ST 42
+-    `storey_range`: floor level (range) of the resale flat unit, e.g. 07 TO 09
+-    `floor_area_sqm`: floor area of the resale flat unit in square metres
+- `flat_model`: HDB model of the resale flat, e.g. Multi Generation**
+    - **Standard**: (1/2/3/4/5-room). 1960s HDB. Had WC and shower in same room. 5-room Standard were introduced in 1974.
+    - **Improved**: (1/2/3/4/5-room). Introduced in 1966, the 3/4-**room having** separate WC and shower, they also featured void decks. 5-room Improved were introduced in 1974.
+    - **New Generation**: Started first in 1975, New Generation flats can be 3-Room (67 / 82 sqm) or 4-Room (92 sqm), featuring en-suite toilet for master bedroom, with pedestal type Water Closet, plus store room.
+    - **Model A**: Introduced in 1981: 3-Room (75 sqm), 4-Room (105 sqm), 5-Room (135 sqm), 5-Room Maisonette (139 sqm)
+    - **Model A2**: Smaller units of Model A. e.g., 4-Room Model A2 (90 sqm)
+    - **Simplified**: Introduced in 1984: 3-Room (64 sqm), 4-Room (84 sqm)
+    - **Multi Generation**: 3Gen flats designed to meet the needs of multi-generation families.
+    - **Maisonette**: AKA Model A Maisonette — 2 storeys HDB flat
+    - **Premium Apartment**: Introduced somewhere during 1990s, featuring better quality finishes, you get them in ready-to-move condition, with flooring, kitchen cabinets, built-in wardrobes
+    - **Executive Maisonette**: More premium version of Model A Maisonettes. These units are no longer being built after being replaced by the Executive Condominium (EC) scheme in 1995
+    - **Executive Apartment**: Executive Apartment / Maisonette (146-150 sqm) were introduced in 1983 and replaced 5-Room Model A flats, in addition of the 3-bedroom and separate living/dining found in 5A flats, EA and EM feature an utility/maid room. 80% of Executive units were Maisonettes and 20% were Apartments.
+    - **DBBS**: public apartments built under the HDB's short-lived Design, Build and Sell Scheme (DBSS) from 2005 to 2012. They are a unique (and premium) breed of HDB flats in Singapore, which are built by private developers. High Prices. Quite similiar to Executive Condominium except DBBS is like a premium HDB without facilities of private condos
+    - **Adjoined Flat**: Large HDB flats which are combined from 2 HDB flats
+    - **Terrace**: HDB terrace flats built before HDB, without realizing Singapore's land constraint. Discontinued
+    - **Type S1S2**: apartments at The Pinnacle@Duxton are classified as "S" or Special apartments in view of its historical significance and award-winning design. For application of HDB policies, S1 and S2 apartments will be treated as 4-room and 5-room flats respectively
+    - **2-room**: Most likely refers to 2-room flexi where there is 1 bedroom and 1 common area
+-    `lease_commence_date`: commencement year of the flat unit's 99-year lease
+-    `Tranc_Year`: year of resale transaction
+-    `Tranc_Month`: month of resale transaction
+-    `mid_storey`: median value of storey_range
+-    `lower`: lower value of storey_range
+-    `upper`: upper value of storey_range
+-    `mid`: middle value of storey_range
+-    `full_flat_type`: combination of flat_type and flat_model
+-    `address`: combination of block and street_name
+-    `floor_area_sqft`: floor area of the resale flat unit in square feet
+-    `hdb_age`: number of years from lease_commence_date to present year
+-    `max_floor_lvl`: highest floor of the resale flat
+-    `year_completed`: year which construction was completed for resale flat
+-    `residential`: boolean value if resale flat has residential units in the same block
+-    `commercial`: boolean value if resale flat has commercial units in the same block
+-    `market_hawker`: boolean value if resale flat has a market or hawker centre in the same block
+-    `multistorey_carpark`: boolean value if resale flat has a multistorey carpark in the same block
+-    `precinct_pavilion`: boolean value if resale flat has a pavilion in the same block
+-    `total_dwelling_units`: total number of residential dwelling units in the resale flat
+-    `1room_sold`: number of 1-room residential units in the resale flat
+-    `2room_sold`: number of 2-room residential units in the resale flat
+-    `3room_sold`: number of 3-room residential units in the resale flat
+-    `4room_sold`: number of 4-room residential units in the resale flat
+-    `5room_sold`: number of 5-room residential units in the resale flat
+-    `exec_sold`: number of executive type residential units in the resale flat block
+-    `multigen_sold`: number of multi-generational type residential units in the resale flat block
+-    `studio_apartment_sold`: number of studio apartment type residential units in the resale flat block
+-    `1room_rental`: number of 1-room rental residential units in the resale flat block
+-    `2room_rental`: number of 2-room rental residential units in the resale flat block
+-    `3room_rental`: number of 3-room rental residential units in the resale flat block
+-    `other_room_rental`: number of "other" type rental residential units in the resale flat block
+-    `postal`: postal code of the resale flat block
+-    `Latitude`: Latitude based on postal code
+-    `Longitude`: Longitude based on postal code
+-    `planning_area`: Government planning area that the flat is located
+-    `Mall_Nearest_Distance`: distance (in metres) to the nearest mall
+-    `Mall_Within_500m`: number of malls within 500 metres
+-    `Mall_Within_1km`: number of malls within 1 kilometre
+-    `Mall_Within_2km`: number of malls within 2 kilometres
+-    `Hawker_Nearest_Distance`: distance (in metres) to the nearest hawker centre
+-    `Hawker_Within_500m`: number of hawker centres within 500 metres
+-    `Hawker_Within_1km`: number of hawker centres within 1 kilometre
+-    `Hawker_Within_2km`: number of hawker centres within 2 kilometres
+-    `hawker_food_stalls`: number of hawker food stalls in the nearest hawker centre
+-    `hawker_market_stalls`: number of hawker and market stalls in the nearest hawker centre
+-    `mrt_nearest_distance`: distance (in metres) to the nearest MRT station
+-    `mrt_name`: name of the nearest MRT station
+-    `bus_interchange`: boolean value if the nearest MRT station is also a bus interchange
+-    `mrt_interchange`: boolean value if the nearest MRT station is a train interchange station
+-    `mrt_latitude`: latitude (in decimal degrees) of the the nearest MRT station
+-    `mrt_longitude`: longitude (in decimal degrees) of the nearest MRT station
+-    `bus_stop_nearest_distance`: distance (in metres) to the nearest bus stop
+-    `bus_stop_name`: name of the nearest bus stop
+-    `bus_stop_latitude`: latitude (in decimal degrees) of the the nearest bus stop
+-    `bus_stop_longitude`: longitude (in decimal degrees) of the nearest bus stop
+-    `pri_sch_nearest_distance`: distance (in metres) to the nearest primary school
+-    `pri_sch_name`: name of the nearest primary school
+-    `vacancy`: number of vacancies in the nearest primary school
+-    `pri_sch_affiliation`: boolean value if the nearest primary school has a secondary school affiliation
+-    `pri_sch_latitude`: latitude (in decimal degrees) of the the nearest primary school
+-    `pri_sch_longitude`: longitude (in decimal degrees) of the nearest primary school
+-    `sec_sch_nearest_dist`: distance (in metres) to the nearest secondary school
+-    `sec_sch_name`: name of the nearest secondary school
+-    `cutoff_point`: PSLE cutoff point of the nearest secondary school
+-    `affiliation`: boolean value if the nearest secondary school has an primary school affiliation
+-    `sec_sch_latitude`: latitude (in decimal degrees) of the the nearest secondary school
+-    `sec_sch_longitude`: longitude (in decimal degrees) of the nearest secondary school
